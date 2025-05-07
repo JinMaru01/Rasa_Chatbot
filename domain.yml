@@ -1,0 +1,92 @@
+version: '3.1'
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_for_mission
+  - inform_mission_customer
+  - inform_mission_community
+  - inform_mission_employee
+  - inform_mission_shareholder
+
+responses:
+  utter_greet:
+    - text: "Hey there! How can I assist you today?"
+    - text: "Hello! What can I do for you?"
+  
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+    - text: "See you later! Take care."
+
+  utter_affirm:
+    - text: "Glad to hear that!"
+    - text: "Awesome! Let's proceed."
+
+  utter_iamabot:
+    - text: I am a bot, here to help you with company policy.
+
+  utter_deny:
+    - text: "Alright, no problem."
+    - text: "I understand. Let me know if you need anything else."
+
+  utter_mood_great:
+    - text: "That’s fantastic! Keep up the positive energy!"
+    - text: "Glad to hear you’re feeling great!"
+
+  utter_mood_unhappy:
+    - text: "I’m sorry to hear that. Anything I can do to help?"
+    - text: "I hope things get better soon."
+
+  utter_bot_challenge:
+    - text: "I am Rasa-powered AI assistant, here to help you!"
+    - text: "I'm an AI, but I’m happy to chat and assist!"
+
+  utter_ask_mission_category:
+    - text: Which aspect of our mission are you interested in?
+      buttons:
+        - title: Customer at the heart
+          payload: /inform_mission_customer
+        - title: Community as the cause
+          payload: /inform_mission_community
+        - title: Employee as the pillar
+          payload: /inform_mission_employee
+        - title: Deliver shareholder value
+          payload: /inform_mission_shareholder
+        # - title: All Detail
+        #   payload: /inform_all_mission
+
+  utter_mission_customer:
+    - text: To engage and understand customer need, provide best-in-class product and services, be respectful and quick in resolving—resulting in true customer delight.
+
+  utter_mission_community:
+    - text: To deliver robust and cost-effective mobile money service that promotes financial inclusion, catalyzes growth, and reduces social inequality.
+
+  utter_mission_employee:
+    - text: To provide an enabling work culture, where career aspirations can be realized through consistent performance and demonstration of WING's core values.
+
+  utter_mission_shareholder:
+    - text: To demonstrate strong corporate governance standards that protect and balance shareholder interests in achieving business goals and staying relevant by offering innovative mobile financial services accessible to all.
+
+  utter_all_mission:
+    - text: |
+        Here’s our mission:
+        - **Customer at the heart:** Providing best-in-class services with customer satisfaction at heart.
+        - **Community as the cause:** Driving financial inclusion to reduce social inequality.
+        - **Employee as the pillar:** Fostering a work culture that supports career aspirations.
+        - **Deliver shareholder value:** Ensuring strong corporate governance and sustainable growth.
+  
+  utter_ask_clarification:
+    - text: "I'm not sure I understood. Could you rephrase or provide more details?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_get_customer_info
+  - action_exit_bot

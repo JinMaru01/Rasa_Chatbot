@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to ask_for_mission
+  steps:
+  - intent: ask_for_mission
+  - action: utter_ask_mission_category
+
+- rule: Respond to ask_for_mission - all mission
+  steps:
+  - intent: inform_all_mission
+  - action: utter_all_mission
+
+- rule: Respond to mission 1 - Customer at the heart
+  steps:
+  - intent: inform_mission_customer
+  - action: utter_mission_customer
+
+- rule: Respond to mission 2 - Community as the cause
+  steps:
+  - intent: inform_mission_community
+  - action: utter_mission_community
+
+- rule: Respond to mission 3 - Employee as the pillar
+  steps:
+  - intent: inform_mission_employee
+  - action: utter_mission_employee
+
+- rule: Respond to mission 4 - Deliver shareholder value
+  steps:
+  - intent: inform_mission_shareholder
+  - action: utter_mission_shareholder
+
+- rule: Handle low-confidence responses
+  steps:
+  - intent: nlu_fallback
+  - action: utter_ask_clarification

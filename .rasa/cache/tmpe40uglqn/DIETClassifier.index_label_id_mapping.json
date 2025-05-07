@@ -1,0 +1,14 @@
+{
+  "0": "affirm",
+  "1": "ask_for_mission",
+  "2": "bot_challenge",
+  "3": "deny",
+  "4": "goodbye",
+  "5": "greet",
+  "6": "inform_mission_community",
+  "7": "inform_mission_customer",
+  "8": "inform_mission_employee",
+  "9": "inform_mission_shareholder",
+  "10": "mood_great",
+  "11": "mood_unhappy"
+}

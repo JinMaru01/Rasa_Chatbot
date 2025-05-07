@@ -1,0 +1,131 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you
+- intent: ask_for_mission
+  examples: |
+    - What is the company's mission?
+    - What's your mission statement?
+    - Tell me your core mission
+    - What do you stand for?
+    - Can you explain your mission?
+- intent: inform_mission_customer
+  examples: |
+    - Customer at the heart
+    - I want to know about the customer mission
+    - Tell me the customer part
+    - Customer values
+    - what is customer at the heart?
+    - What is mission one mean?
+    - Mission 1 of company
+- intent: inform_mission_community
+  examples: |
+    - Community as the cause
+    - What's your community mission?
+    - I want to know about the community
+    - Community focus
+    - What is mission two mean?
+    - Mission 2 of company
+- intent: inform_mission_employee
+  examples: |
+    - Employee as the pillar
+    - Tell me the employee mission
+    - What do you offer to employees?
+    - Employee core values
+    - What is mission three mean?
+    - Mission 3 of company
+- intent: inform_mission_shareholder
+  examples: |
+    - Deliver shareholder value
+    - What about shareholders?
+    - Shareholder mission
+    - Mission related to shareholders
+    - What is mission four mean?
+    - Mission 4 of company
+
+- intent: inform_all_mission
+  examples: |
+    - detail on all mission of company
+    - detail all mission of company
+    - all information of company mission

@@ -1,0 +1,42 @@
+# recipe: default.v1
+
+language: en
+
+pipeline:
+- name: SpacyNLP
+  model: en_core_web_md
+- name: SpacyTokenizer
+- name: SpacyFeaturizer
+# - name: WhitespaceTokenizer
+# - name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+- name: "DucklingEntityExtractor"
+- name: ResponseSelector
+  epochs: 100
+- name: FallbackClassifier
+  threshold: 0.3
+
+
+# policies:
+# - name: RulePolicy
+# assistant_id: 20250505-103943-sweet-application
+
+# pipeline:
+# - name: SpacyNLP
+# - name: SpacyTokenizer
+# - name: SpacyFeaturizer
+# - name: DIETClassifier
+# - name: EntitySynonymMapper
+
+policies:
+- name: RulePolicy
+  core_fallback_threshold: 0.3
+  core_fallback_action_name: "action_default_fallback"
+  enable_fallback_prediction: true
+- name: MemoizationPolicy
+- name: TEDPolicy
+assistant_id: 20250507-101358-each-cornice

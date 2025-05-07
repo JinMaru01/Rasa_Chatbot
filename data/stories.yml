@@ -1,0 +1,51 @@
+version: "3.1"
+stories:
+- story: greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: user asks who the bot is
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: ask about company mission
+  steps:
+  - intent: ask_for_mission
+  - action: utter_ask_mission_category
+
+- story: user selects mission - customer
+  steps:
+  - intent: inform_mission_customer
+  - action: utter_mission_customer
+
+- story: user selects mission - community
+  steps:
+  - intent: inform_mission_community
+  - action: utter_mission_community
+
+- story: user selects mission - employee
+  steps:
+  - intent: inform_mission_employee
+  - action: utter_mission_employee
+
+- story: user selects mission - shareholder
+  steps:
+  - intent: inform_mission_shareholder
+  - action: utter_mission_shareholder
+
+- story: ask mission
+  steps:
+  - intent: ask_for_mission
+  - action: utter_ask_mission_category
+
+- story: ask mission detail
+  steps:
+  - intent: inform_all_mission
+  - action: utter_all_mission
