@@ -20,18 +20,6 @@ pipeline:
 - name: FallbackClassifier
   threshold: 0.3
 
-
-# policies:
-# - name: RulePolicy
-# assistant_id: 20250505-103943-sweet-application
-
-# pipeline:
-# - name: SpacyNLP
-# - name: SpacyTokenizer
-# - name: SpacyFeaturizer
-# - name: DIETClassifier
-# - name: EntitySynonymMapper
-
 policies:
 - name: RulePolicy
   core_fallback_threshold: 0.3
